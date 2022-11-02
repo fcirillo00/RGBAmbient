@@ -18,6 +18,7 @@ def np_flip(im):
     frame = np.array(im, dtype=np.uint8)
     return np.flip(frame[:, :, :3], 2)
 
+# get resolution data
 test = np.array(SCT.grab(MONITOR))
 
 resolution_y = test.shape[0]
@@ -32,6 +33,7 @@ width_center_left = int( (width-width*config["center_size"] ) / 2 )
 width_center_right = int( (width+width*config["center_size"] ) / 2 )
 
 ##########################
+# create numpy masks for weight_borders and ignore_center
 test = cv2.resize(np_flip(SCT.grab(MONITOR)), (width,height))
 
 ignore_center = np.full_like(test, fill_value=config["weight_borders"], dtype=np.uint8)
