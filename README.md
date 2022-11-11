@@ -2,7 +2,7 @@
 PC Ambient lights for unaddressable RGB LED strips.
 
 ## How it works
-On your PC, at a frequency set by the user, a screenshot is taken and a RGB value is derived from it and sent to a serial port. Here, an external device like an ESP8266 or an Arduino listens for the value and sets the LED strip color accordingly.
+On your PC, at a frequency set by the user, a screenshot is taken and a RGB value is derived from it and sent to a serial port. Here, an external device like an ESP8266 or an Arduino listens for the value and sets the LED strip color accordingly. You can put the strip behind your monitor to get an ambient effect.
 
 Here's an example circuit:
 
